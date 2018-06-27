@@ -1,0 +1,74 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Alice Jones",
+      "department": 1,
+      "computer": 3
+    },
+    {
+      "id": 2,
+      "name": "Bob Antworp",
+      "department": 3,
+      "computer": 2
+    },
+    {
+      "id": 2,
+      "name": "Carol Threepwood",
+      "department": 2,
+      "computer": 1
+    },
+    {
+      "id": 2,
+      "name": "Dave Balfour",
+      "department": 3,
+      "computer": 4
+    },
+    {
+      "id": 2,
+      "name": "Emma Fivennici",
+      "department": 1,
+      "computer": 2
+    },
+    {
+      "id": 2,
+      "name": "Fred Sixton",
+      "department": 2,
+      "computer": 3
+    }
+  ],
+
+  "departments": [
+    {
+      "id": 1,
+      "departmentName": "IT"
+    },
+    {
+      "id": 2,
+      "departmentName": "Customer Service"
+    },
+    {
+      "id": 3,
+      "departmentName": "Sales"
+    }
+  ],
+
+  "computers": [
+    {
+      "id": 1,
+      "computerType": "Dell laptop"
+    },
+    {
+      "id": 2,
+      "computerType": "HP laptop"
+    },
+    {
+      "id": 3,
+      "computerType": "Surface Pro tablet"
+    },
+    {
+      "id": 4,
+      "computerType": "MacBook laptop"
+    }
+  ]
+}
