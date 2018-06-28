@@ -8,30 +8,30 @@
     },
     {
       "id": 2,
-      "name": "Bob Antworp",
+      "name": "Bob Kurtworst",
       "department": 3,
       "computer": 2
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Carol Threepwood",
       "department": 2,
       "computer": 1
     },
     {
-      "id": 2,
+      "id": 4,
       "name": "Dave Balfour",
       "department": 3,
       "computer": 4
     },
     {
-      "id": 2,
-      "name": "Emma Fivennici",
+      "id": 5,
+      "name": "Emily Stoffiver",
       "department": 1,
       "computer": 2
     },
     {
-      "id": 2,
+      "id": 6,
       "name": "Fred Sixton",
       "department": 2,
       "computer": 3

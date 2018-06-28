@@ -1,6 +1,6 @@
 
 /* 
-Accepts an employee object and displays individual employees using this format:
+Accepts an employee object and returns individual employees using this format:
   <article class="employee">
     <header class="employee__name">
       <h2>Rainu Ittycheriah</h1>
@@ -15,6 +15,8 @@ Accepts an employee object and displays individual employees using this format:
 */
 
 const $ = require("jquery");
+const getValue = require("./getValue");
+// Required by: list-employees
 
 const displayEmployee = (employee) => {
   const $employeeCard = $("<article>").addClass("employee");
@@ -25,15 +27,32 @@ const displayEmployee = (employee) => {
   $nameHeader.appendTo($employeeCard);
 
   const $deptSection = $("<section>").addClass("employee__department");
-  let departmentName;
+  let employeeDepartmentName;
   const departmentId = employee.department;
   getValue("departments", departmentId)
   .then(response => {
-    departmentName = response.departmentName;
-    console.log(departmentName);
+    employeeDepartmentName = response.departmentName;
+    console.log(employeeDepartmentName);
   });
-  $deptSection.text(`Works in the ${departmentName} department`);
+  $deptSection.text(`Works in the ${employeeDepartmentName} department`);
   $deptSection.appendTo($employeeCard);
 
-  
+  const $cpuSection = $("<section>").addClass("employee__computer");
+  let employeeComputerType;
+  const computerId = employee.computer;
+  getValue("computers", computerId)
+  .then(response => {
+    employeeComputerType = response.computerType;
+    console.log(employeeComputerType);
+  });
+  $cpuSection.text("Currently using a ${computerType} computer");
+  $cpuSection.appendTo($employeeCard);
+  console.log($employeeCard);
+  return $employeeCard;
 };
+
+$.ajax("http://localhost:3000/employees/3")
+.then(response => {
+  console.log(response);
+  displayEmployee(response);
+});
