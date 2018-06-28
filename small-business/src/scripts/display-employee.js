@@ -33,9 +33,9 @@ const displayEmployee = (employee) => {
   .then(response => {
     employeeDepartmentName = response.departmentName;
     console.log(employeeDepartmentName);
+    $deptSection.text(`Works in the ${employeeDepartmentName} department`);
+    $deptSection.appendTo($employeeCard);
   });
-  $deptSection.text(`Works in the ${employeeDepartmentName} department`);
-  $deptSection.appendTo($employeeCard);
 
   const $cpuSection = $("<section>").addClass("employee__computer");
   let employeeComputerType;
@@ -44,15 +44,17 @@ const displayEmployee = (employee) => {
   .then(response => {
     employeeComputerType = response.computerType;
     console.log(employeeComputerType);
+    $cpuSection.text(`Currently using a ${employeeComputerType} computer`);
+    $cpuSection.appendTo($employeeCard);
   });
-  $cpuSection.text("Currently using a ${computerType} computer");
-  $cpuSection.appendTo($employeeCard);
   console.log($employeeCard);
   return $employeeCard;
 };
 
-$.ajax("http://localhost:3000/employees/3")
-.then(response => {
-  console.log(response);
-  displayEmployee(response);
-});
+module.exports = displayEmployee;
+
+// $.ajax("http://localhost:3000/employees/3")
+// .then(response => {
+//   console.log(response);
+//   displayEmployee(response);
+// });
